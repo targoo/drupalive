@@ -1,0 +1,38 @@
+<ion-view view-title="Feeds">
+
+  <ion-header-bar class="bar bar-stable bar-subheader item-input-inset">
+    <div class="item-input-wrapper">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input id="searchKey" type="search" placeholder="Search articles" ng-model="search"
+             autocorrect="off" ng-change="setFilter()">
+      <button class="button button-clear" ng-click="clear()">X</button>
+    </div>
+  </ion-header-bar>
+
+  <ion-content class="has-header has-subheader">
+
+    <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <ion-list class="list">
+      <label class="item item-input item-select">
+        <div class="input-label pull-right">
+          <strong>Sort By</strong>
+        </div>
+        <select ng-model="$parent.orderBy" ng-change="setOrderBy()">
+          <option value="title">Title</option>
+          <option value="field_date">Date</option>
+          <option value="field_rate">Rate</option>
+        </select>
+      </label>
+
+      <feed-item ng-repeat="feed in feeds" href="#/tab/feeds/{{feed.nid}}">
+      </feed-item>
+    </ion-list>
+
+    <ion-infinite-scroll ng-if="hasMoreData" on-infinite="loadMore()" icon="ion-loading-c">
+    </ion-infinite-scroll>
+
+  </ion-content>
+
+</ion-view>

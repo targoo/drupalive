@@ -1,0 +1,16 @@
+<ion-view title="Session Detail">
+  <ion-content class="has-header">
+    <div class="item tabs tabs-secondary tabs-icon-left">
+      <a class="tab-item" ng-class="{'active': isFavorite} "ng-click="manageFavorite()">
+        <i class="icon ion-heart"></i>
+        Favorite
+      </a>
+    </div>
+    <div class="item">
+      <h2 class="title">{{node.title}}</h2>
+    </div>
+    <div class="item item-body">
+      <p>{{node.body}}</p>
+    </div>
+  </ion-content>
+</ion-view>

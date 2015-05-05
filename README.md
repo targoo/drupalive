@@ -13,3 +13,6 @@
    $ ionic build
 ```
 
+## Links
+http://ngcordova.com/
+http://ionicframework.com/
