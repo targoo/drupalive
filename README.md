@@ -1,13 +1,13 @@
 # Drupalive
 
 ## Prepare
-$ bower update
-$ cordova add ios
+   $ bower update
+   $ cordova add ios
 
 
 ## Run
-$ ionic serve
-$ ionic run
-$ ionic build
+   $ ionic serve
+   $ ionic run
+   $ ionic build
 
 
