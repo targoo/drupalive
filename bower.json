@@ -4,7 +4,9 @@
   "dependencies": {
     "ngCordova": "~0.1.15-alpha",
     "underscore": "~1.8.3",
-    "angular-cache": "~4.2.0"
+    "angular-cache": "~4.2.0",
+    "fastclick": "1.0.6",
+    "Hover": 2.0.2
   },
   "devDependencies": {
     "ionic": "driftyco/ionic-bower#1.0.0-rc.5"
